@@ -85,7 +85,7 @@ async function loadPlayers(){
         table.innerHTML += `
         <tr>
 
-            <td>ALR-${String(number).padStart(5,"0")}</td>
+            <td>${player.playerId}</td>
 
             <td>${player.name}</td>
 
