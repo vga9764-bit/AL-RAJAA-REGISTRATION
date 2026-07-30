@@ -17,10 +17,10 @@ async function loadPlayers() {
     const snapshot = await getDocs(collection(db, "players"));
 
     let number = 1;
+  
+snapshot.forEach((playerDoc) => {
 
-    snapshot.forEach((doc) => {
-
-        const player = doc.data();
+    const player = playerDoc.data();
 
         table.innerHTML += `
         <tr>
