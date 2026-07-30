@@ -78,3 +78,21 @@ footer{
     background:#161616;
     margin-top:80px;
 }
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.admin-btn{
+    background:#222;
+    color:gold;
+    border:2px solid gold;
+}
+
+.admin-btn:hover{
+    background:gold;
+    color:black;
+}
