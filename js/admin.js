@@ -8,6 +8,8 @@ import {
   deleteDoc
 } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
+alert("admin.js اشتغل");
+
 const table = document.getElementById("playersTable");
 
 window.acceptPlayer = async function(id){
