@@ -38,18 +38,18 @@ snapshot.forEach((playerDoc) => {
         </td>
 
         <td>
+        
+<button class="accept" onclick="acceptPlayer('${playerDoc.id}')">
+قبول
+</button>
 
-        <button class="accept">
-        قبول
-        </button>
+<button class="reject" onclick="rejectPlayer('${playerDoc.id}')">
+رفض
+</button>
 
-        <button class="reject">
-        رفض
-        </button>
-
-        <button class="delete">
-        حذف
-        </button>
+<button class="delete" onclick="deletePlayer('${playerDoc.id}')">
+حذف
+</button>
 
         </td>
 
