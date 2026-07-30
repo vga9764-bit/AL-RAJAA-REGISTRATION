@@ -1,1 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma,sans-serif;
+}
 
+body{
+    background:#111;
+    color:white;
+}
+
+header{
+    background:#1a1a1a;
+    text-align:center;
+    padding:30px;
+    border-bottom:3px solid gold;
+}
+
+.logo{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:3px solid gold;
+    background:white;
+    padding:8px;
+}
+
+header h1{
+    color:gold;
+    margin-top:15px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:#1d1d1d;
+    border:2px solid gold;
+    border-radius:15px;
+    text-align:center;
+    padding:25px;
+}
+
+.card h2{
+    color:gold;
+    font-size:38px;
+}
+
+.card p{
+    margin-top:10px;
+}
+
+.tableBox{
+    margin:30px;
+    background:#1b1b1b;
+    padding:20px;
+    border-radius:15px;
+    overflow:auto;
+}
+
+#search{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:gold;
+    color:black;
+    padding:15px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #444;
+    text-align:center;
+}
+
+button{
+    border:none;
+    border-radius:8px;
+    padding:8px 12px;
+    margin:2px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.accept{
+    background:#28a745;
+    color:white;
+}
+
+.reject{
+    background:#dc3545;
+    color:white;
+}
+
+.delete{
+    background:#555;
+    color:white;
+}
