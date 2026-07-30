@@ -98,16 +98,20 @@ async function loadPlayers(){
             <td>
 
                 <button class="accept" onclick="acceptPlayer('${playerDoc.id}')">
-                    ✅ قبول
-                </button>
+    ✅ قبول
+</button>
 
-                <button class="reject" onclick="rejectPlayer('${playerDoc.id}')">
-                    ❌ رفض
-                </button>
+<button class="reject" onclick="rejectPlayer('${playerDoc.id}')">
+    ❌ رفض
+</button>
 
-                <button class="delete" onclick="deletePlayer('${playerDoc.id}')">
-                    🗑️ حذف
-                </button>
+<button onclick="window.location.href='player.html?id=${playerDoc.id}'">
+    🪪 البطاقة
+</button>
+
+<button class="delete" onclick="deletePlayer('${playerDoc.id}')">
+    🗑️ حذف
+</button>
 
             </td>
 
