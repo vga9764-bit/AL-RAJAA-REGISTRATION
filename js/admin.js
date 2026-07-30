@@ -23,17 +23,19 @@ snapshot.forEach((playerDoc) => {
     const player = playerDoc.data();
 
         table.innerHTML += `
-        <tr>
+<tr>
 
-        <td>ALR-${String(number).padStart(5,"0")}</td>
+<td>ALR-${String(number).padStart(5,"0")}</td>
 
-        <td>${player.name}</td>
+<td>${player.name}</td>
 
-        <td>${player.position}</td>
+<td>${player.position}</td>
 
-        <td>${player.phone}</td>
+<td>${player.phone}</td>
 
-        <td>
+...
+</tr>
+`;
         🟡 قيد المراجعة
         </td>
 
