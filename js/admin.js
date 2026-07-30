@@ -2,7 +2,10 @@ import { db } from "./firebase.js";
 
 import {
   collection,
-  getDocs
+  getDocs,
+  doc,
+  updateDoc,
+  deleteDoc
 } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
 const table = document.getElementById("playersTable");
