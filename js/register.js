@@ -11,18 +11,21 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const player = {
-    name: document.getElementById("name").value,
-    birth: document.getElementById("birth").value,
-    phone: document.getElementById("phone").value,
-    address: document.getElementById("address").value,
-    position: document.getElementById("position").value,
-    height: document.getElementById("height").value,
-    weight: document.getElementById("weight").value,
-    foot: document.getElementById("foot").value,
-    clubs: document.getElementById("clubs").value,
-    notes: document.getElementById("notes").value,
-    createdAt: serverTimestamp()
-  };
+  name: document.getElementById("name").value,
+  birth: document.getElementById("birth").value,
+  phone: document.getElementById("phone").value,
+  address: document.getElementById("address").value,
+  position: document.getElementById("position").value,
+  height: document.getElementById("height").value,
+  weight: document.getElementById("weight").value,
+  foot: document.getElementById("foot").value,
+  clubs: document.getElementById("clubs").value,
+  notes: document.getElementById("notes").value,
+
+  status: "pending",
+
+  createdAt: serverTimestamp()
+};
 
   try {
     await addDoc(collection(db, "players"), player);
