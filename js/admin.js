@@ -10,48 +10,82 @@ import {
 
 const table = document.getElementById("playersTable");
 
-async function loadPlayers() {
+window.acceptPlayer = async function(id){
+    await updateDoc(doc(db,"players",id),{
+        status:"accepted"
+    });
 
-    table.innerHTML = "";
+    loadPlayers();
+}
 
-    const snapshot = await getDocs(collection(db, "players"));
+window.rejectPlayer = async function(id){
+    await updateDoc(doc(db,"players",id),{
+        status:"rejected"
+    });
 
-    let number = 1;
-  
-snapshot.forEach((playerDoc) => {
+    loadPlayers();
+}
 
-    const player = playerDoc.data();
+window.deletePlayer = async function(id){
+
+    if(confirm("هل تريد حذف اللاعب؟")){
+
+        await deleteDoc(doc(db,"players",id));
+
+        loadPlayers();
+
+    }
+
+}
+
+async function loadPlayers(){
+
+    table.innerHTML="";
+
+    const snapshot = await getDocs(collection(db,"players"));
+
+    let number=1;
+
+    snapshot.forEach((playerDoc)=>{
+
+        const player = playerDoc.data();
+
+        let status="🟡 قيد المراجعة";
+
+        if(player.status=="accepted"){
+            status="🟢 مقبول";
+        }
+
+        if(player.status=="rejected"){
+            status="🔴 مرفوض";
+        }
 
         table.innerHTML += `
-<tr>
+        <tr>
 
-<td>ALR-${String(number).padStart(5,"0")}</td>
+        <td>ALR-${String(number).padStart(5,"0")}</td>
 
-<td>${player.name}</td>
+        <td>${player.name}</td>
 
-<td>${player.position}</td>
+        <td>${player.position}</td>
 
-<td>${player.phone}</td>
+        <td>${player.phone}</td>
 
-...
-</tr>
-`;
-        🟡 قيد المراجعة
-        </td>
+        <td>${status}</td>
 
         <td>
-        
-<button class="accept" onclick="acceptPlayer('${playerDoc.id}')">
-قبول
-</button>
 
-<button class="reject" onclick="rejectPlayer('${playerDoc.id}')">
-رفض
-</button>
+        <button class="accept" onclick="acceptPlayer('${playerDoc.id}')">
+        قبول
+        </button>
 
-<button class="delete" onclick="deletePlayer('${playerDoc.id}')">
-حذف
-</button>
+        <button class="reject" onclick="rejectPlayer('${playerDoc.id}')">
+        رفض
+        </button>
+
+        <button class="delete" onclick="deletePlayer('${playerDoc.id}')">
+        حذف
+        </button>
 
         </td>
 
