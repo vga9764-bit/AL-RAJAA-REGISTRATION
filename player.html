@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>بطاقة اللاعب</title>
+
+<link rel="stylesheet" href="css/player.css">
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="images/logo.png" class="logo">
+
+<h1>نادي الرجاء الرياضي</h1>
+
+<hr>
+
+<h2 id="playerName">...</h2>
+
+<p><strong>رقم اللاعب:</strong> <span id="playerId"></span></p>
+
+<p><strong>المركز:</strong> <span id="position"></span></p>
+
+<p><strong>الهاتف:</strong> <span id="phone"></span></p>
+
+<p><strong>الحالة:</strong> <span id="status"></span></p>
+
+<button onclick="window.print()">
+🖨️ طباعة البطاقة
+</button>
+
+</div>
+
+<script type="module" src="js/player.js"></script>
+
+</body>
+
+</html>
