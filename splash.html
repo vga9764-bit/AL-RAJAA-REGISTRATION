@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>نادي الرجاء الرياضي</title>
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+}
+
+.container{
+text-align:center;
+animation:fade 1s ease;
+}
+
+.logo{
+width:170px;
+margin-bottom:20px;
+animation:zoom 1.5s ease;
+}
+
+h1{
+color:#FFD700;
+margin-bottom:10px;
+}
+
+p{
+font-size:18px;
+color:#ddd;
+margin-bottom:25px;
+}
+
+.loader{
+width:45px;
+height:45px;
+border:5px solid #555;
+border-top:5px solid #FFD700;
+border-radius:50%;
+margin:auto;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+@keyframes zoom{
+0%{transform:scale(.4);}
+100%{transform:scale(1);}
+}
+
+@keyframes fade{
+0%{opacity:0;}
+100%{opacity:1;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="images/logo.png" class="logo">
+
+<h1>نادي الرجاء الرياضي</h1>
+
+<p>منصة تسجيل اللاعبين الرسمية</p>
+
+<div class="loader"></div>
+
+</div>
+
+<script>
+
+setTimeout(function(){
+
+window.location.href="index.html";
+
+},2000);
+
+</script>
+
+</body>
+
+</html>
